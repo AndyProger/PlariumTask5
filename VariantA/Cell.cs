@@ -18,7 +18,7 @@ namespace PlariumTask4
             RightDownPoint = new Point2D(leftUpX + 5, leftUpY + 5);
         }
 
-        public double lengthToPoint(Point2D p)
+        public double DistanceToPoint(Point2D p)
         {
             double centerX = LeftUpPoint.X + 5.0 / 2.0;
             double centerY = LeftUpPoint.Y + 5.0 / 2.0;
@@ -34,8 +34,8 @@ namespace PlariumTask4
         */
         public int CompareTo(Cell other)
         {
-            double otherLength = other.lengthToPoint(new Point2D(0, 0));
-            double length = lengthToPoint(new Point2D(0, 0));
+            double otherLength = other.DistanceToPoint(new Point2D(0, 0));
+            double length = DistanceToPoint(new Point2D(0, 0));
 
             if (length > otherLength)
                 return 1;

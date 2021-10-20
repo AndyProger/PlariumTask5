@@ -15,7 +15,7 @@ namespace PlariumTask4
         }
 
         // поиск расстояния до указанной точки
-        public double lengthToPoint2D(Point2D otherPoint)
+        public double DistanceToPoint2D(Point2D otherPoint)
         {
             return Math.Sqrt(
                 (otherPoint.X - X) * (otherPoint.X - X) + 
@@ -23,9 +23,7 @@ namespace PlariumTask4
         }
 
         // из-за большого количества конкатенаций использовано StringBuilder
-        public override string ToString()
-        {
-            return new StringBuilder().Append("(" + X + ", " + Y + ")").ToString();
-        }
+        public override string ToString() => new StringBuilder().Append("(" + X + ", " + Y + ")").ToString();
+     
     }
 }

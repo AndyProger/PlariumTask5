@@ -40,7 +40,7 @@ namespace PlariumTask4
 
                 if (isInside)
                 {
-                    var length = cell.lengthToPoint(new Point2D(0, 0));
+                    var length = cell.DistanceToPoint(new Point2D(0, 0));
                     cellsInsideCircle.TryAdd(cell, length);
                 }
             }
@@ -52,10 +52,10 @@ namespace PlariumTask4
                               Point2D rDownPoint, Point2D rUpPoint,
                               Point2D centerPoint, int radius)
         {
-            return lUpPoint.lengthToPoint2D(centerPoint) <= radius &&
-                   lDownPoint.lengthToPoint2D(centerPoint) <= radius &&
-                   rDownPoint.lengthToPoint2D(centerPoint) <= radius &&
-                   rUpPoint.lengthToPoint2D(centerPoint) <= radius;
+            return lUpPoint.DistanceToPoint2D(centerPoint) <= radius &&
+                   lDownPoint.DistanceToPoint2D(centerPoint) <= radius &&
+                   rDownPoint.DistanceToPoint2D(centerPoint) <= radius &&
+                   rUpPoint.DistanceToPoint2D(centerPoint) <= radius;
         }
 
         static void Main(string[] args)
